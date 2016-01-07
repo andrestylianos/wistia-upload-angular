@@ -3,8 +3,6 @@
   'use strict';
 
   angular
-    .module('processInterviewTest')
-    .constant('malarkey', malarkey)
-    .constant('moment', moment);
+    .module('processInterviewTest');
 
 })();

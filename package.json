@@ -1,7 +1,9 @@
 {
   "name": "processInterviewTest",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "blueimp-file-upload": "^9.11.2"
+  },
   "scripts": {
     "test": "gulp test"
   },
