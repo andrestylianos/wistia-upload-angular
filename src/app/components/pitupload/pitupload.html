@@ -1,9 +1,15 @@
-<form id="fileupload" method="POST" enctype="multipart/form-data" data-file-upload='vm.uploadOptions' data-ng-class="{'fileupload-processing': processing() || loadingFiles}" class="ng-pristine ng-valid ng-scope">
+<form id="fileupload" method="POST" enctype="multipart/form-data" data-file-upload='vm.uploadOptions'>
   <div>
-    <span class="btn btn-success fileinput-button btn-lg">
-      <i class="glyphicon glyphicon-log-in"></i>
-        <span>Add Files</span>
-      <input id="file" type="file" name="file">
+    <span class="btn btn-success fileinput-button btn-lg" ng-disabled='vm.isUploading'>
+      <i class="glyphicon glyphicon-cloud-upload"></i>
+        <span>Upload a video file</span>
+      <input id="file" type="file" name="file" ng-disabled='vm.isUploading'>
     </span>
   </div>
+  <br>
+  <div class="rows">
+    <div class="col-md-4 col-md-offset-4">
+  <progressbar value="vm.progress" type="success"><b>{{vm.progress}}%</b></progressbar>
+</div>
+</div>
 </form>
