@@ -14,10 +14,11 @@
     <!-- endbuild -->
 
     <!-- build:css({.tmp/serve,src}) styles/app.css -->
-    <link rel="stylesheet" href="../bower_components/blueimp-file-upload/css/jquery.fileupload.css"
+    <link rel="stylesheet" href="../bower_components/blueimp-file-upload/css/jquery.fileupload.css"/>
     <!-- inject:css -->
     <!-- css files will be automatically insert here -->
     <!-- endinject -->
+
     <!-- endbuild -->
   </head>
   <body>
@@ -31,14 +32,27 @@
       </div>
     </nav>
     <div class="container">
-    <div class="jumbotron text-center" ui-view>
+    <div class="jumbotron text-center">
+      <h1>Wistia file upload test</h1>
+      <div ui-view></div>
+      <p>
+        Upload a video file
+      </p>
     </div></div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- run `gulp inject` to automatically populate bower script dependencies -->
     <!-- endbower -->
+    <script src="../bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+    <script src="../bower_components/blueimp-file-upload/js/jquery.fileupload.js"></script>
+
+    <script src="../bower_components/blueimp-file-upload/js/jquery.fileupload-angular.js"></script>
+
+    <script src="../bower_components/blueimp-file-upload/js/jquery.fileupload-process.js"></script>
+    <script src="../bower_components/blueimp-file-upload/js/jquery.fileupload-validate.js"></script>
     <!-- endbuild -->
+
 
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
@@ -49,6 +63,7 @@
     <!-- angular templates will be automatically converted in js and inserted here -->
     <!-- endinject -->
     <!-- endbuild -->
+
 
   </body>
 </html>

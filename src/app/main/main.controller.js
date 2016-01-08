@@ -8,19 +8,13 @@
   /** @ngInject */
   function MainController($timeout, $scope, toastr) {
 
-    $scope.showToastr = showToastr;
+    var vm = this;
 
-    $scope.uploadOptions = function(){
-      dataType: 'json',
-      url: 'https://upload.wistia.com/',
-      done: function(e, data){
+    vm.showToastr = showToastr;
 
-      }
-    }
 
     function showToastr() {
       toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
     }
   }
 })();

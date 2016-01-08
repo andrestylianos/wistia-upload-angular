@@ -1,7 +1,9 @@
-<div id="fileupload" class="fileupload" data-file-upload='uploadOptions'>
-  <span class="btn btn-success fileinput-button btn-lg">
-    <i class="glyphicon glyphicon-log-in"></i>  <span>Add Files</span>
-    <input id="file" type="file" name="file"/>
-  </span>
-
-</div>
+<form id="fileupload" method="POST" enctype="multipart/form-data" data-file-upload='vm.uploadOptions' data-ng-class="{'fileupload-processing': processing() || loadingFiles}" class="ng-pristine ng-valid ng-scope">
+  <div>
+    <span class="btn btn-success fileinput-button btn-lg">
+      <i class="glyphicon glyphicon-log-in"></i>
+        <span>Add Files</span>
+      <input id="file" type="file" name="file">
+    </span>
+  </div>
+</form>

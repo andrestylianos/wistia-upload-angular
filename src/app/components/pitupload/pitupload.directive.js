@@ -10,8 +10,8 @@
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/pitupload/pitupload.html',
-      controller: pitUploadController,
-      bindToController: true
+      controller: 'pitUploadController',
+      controllerAs: 'vm'
     };
 
     return directive;
